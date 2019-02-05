@@ -1,20 +1,16 @@
-//create a friend
-//Select a friend and see their properties
-//Delete a friend
-//Display all the friends
-//Friends should be objects 
 
 package sample;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 
-import java.awt.*;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Controller {
 
@@ -45,5 +41,20 @@ public class Controller {
         friendList.getItems().remove(temp);
         labelFirstName.setText("");
         labelLastName.setText("");
+    }
+
+    public void saveFriend(ActionEvent actionEvent) throws IOException {
+        ObservableList<Friend> myList = friendList.getItems();
+        for(Friend f : myList){
+            f.writeToFile();
+        }
+    }
+
+
+    public void loadFriend(ActionEvent actionEvent) throws IOException {
+        ArrayList<Friend> friends = CreateFriend.createAllFriends("Friends.txt");
+        for(Friend f : friends){
+            friendList.getItems().add(f);
+        }
     }
 }
