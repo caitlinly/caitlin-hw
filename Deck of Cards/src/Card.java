@@ -1,4 +1,4 @@
-public abstract class Card{
+public abstract class Card implements Comparable<Card>{
     private String suit;
 
     //default constructor
@@ -24,7 +24,15 @@ public abstract class Card{
         this.suit = suit;
     }
 
+    //Setting the card as a number (1-10) or a face (j,q,k,a)
     abstract String value();
+
+    @Override
+    public int compareTo(Card o){
+        if(this.value == o.value){
+        }
+        return 0;
+    }
 
     @Override
     public String toString() {
