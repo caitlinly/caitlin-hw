@@ -23,8 +23,8 @@ public class NumberCard extends Card{
     }
 
     @Override
-    String value(){
-        return String.valueOf(num);
+    int value(){
+        return num;
     }
 
     @Override

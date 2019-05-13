@@ -1,5 +1,6 @@
 public abstract class Card implements Comparable<Card>{
     private String suit;
+    private int value;
 
     //default constructor
     Card(){
@@ -25,11 +26,15 @@ public abstract class Card implements Comparable<Card>{
     }
 
     //Setting the card as a number (1-10) or a face (j,q,k,a)
-    abstract String value();
+    abstract int value();
 
     @Override
     public int compareTo(Card o){
-        if(this.value == o.value){
+        if(this.value > o.value){
+            return 1;
+        }
+        else if(this.value < o.value){
+            return -1;
         }
         return 0;
     }
