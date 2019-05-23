@@ -1,26 +1,33 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.TreeSet;
+import java.util.*;
 
-public class Main {
+public class Main{
     public static void main(String[] args) throws IOException {
-        ArrayList<String> lines = new ArrayList<>();
+        ArrayList<String[]> lines = new ArrayList<>();
         FileReader fr = new FileReader("illiad.txt");
         BufferedReader br = new BufferedReader(fr);
         String line;
         while ((line = br.readLine()) != null) {
-            //System.out.println(line);
-            lines.add(line);
+            lines.add(line.split(" "));
         }
         br.close();
-        System.out.println(lines.get(3));
 
-        TreeSet<String> texts = new TreeSet<>();
-        for(int i = 0; i <10; i++){
-            
+        lines.subList(i,i+1);
+
+        LinkedHashSet<Word> uniqueWord = new LinkedHashSet<>();
+        for(int i = 0; i < lines.size(); i++){
+            Word w = new Word();
+            uniqueWord.add(w);
         }
+        Iterator<Word> wordIterator = uniqueWord.iterator();
+        while(wordIterator.hasNext()){
+            System.out.println(wordIterator.next());
+        }
+
+
     }
+
 }
 
