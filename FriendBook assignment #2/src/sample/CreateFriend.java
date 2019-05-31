@@ -39,10 +39,11 @@ public class CreateFriend {
             }
         }
 
-        Friend t = new Friend(firstName,lastName);
+        /*Friend t = new Friend(firstName,lastName);
         if(compareFriends(t)){
             friends.add(t);
-        }
+        }*/
+
     }
 
 }
