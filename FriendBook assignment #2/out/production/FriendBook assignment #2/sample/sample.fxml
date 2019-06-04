@@ -42,8 +42,8 @@
                                 <Label layoutX="389.0" layoutY="114.0" text="Friend Information" />
                                 <Label layoutX="349.0" layoutY="151.0" text="First Name:" />
                                 <Label layoutX="349.0" layoutY="184.0" text="Last Name:" />
-                                <Label fx:id="labelFirstName" layoutX="424.0" layoutY="151.0" />
-                                <Label fx:id="labelLastName" layoutX="424.0" layoutY="184.0" />
+                                <Label fx:id="labelFirstName" layoutX="424.0" layoutY="151.0" prefHeight="17.0" prefWidth="32.0" />
+                                <Label fx:id="labelLastName" layoutX="424.0" layoutY="184.0" prefHeight="17.0" prefWidth="27.0" />
                         <Label layoutX="350.0" layoutY="216.0" prefHeight="17.0" prefWidth="62.0" text="Age:" />
                                 <Label fx:id="labelAge" layoutX="422.0" layoutY="216.0" prefHeight="17.0" prefWidth="34.0" />
                                 <Button fx:id="removeFriendButton" layoutX="400.0" layoutY="263.0" mnemonicParsing="false" onAction="#removeFriend" text="Remove" />
@@ -52,6 +52,7 @@
                         <Label layoutX="308.0" layoutY="48.0" prefHeight="24.0" prefWidth="52.0" text="Sort by:" />
                         <Button fx:id="sortNameButton" layoutX="369.0" layoutY="48.0" mnemonicParsing="false" onAction="#sortName" text="Name" />
                         <Button fx:id="sortAgeButton" layoutX="451.0" layoutY="48.0" mnemonicParsing="false" onAction="#sortAge" text="Age" />
+                        <Label fx:id="testlabel" layoutX="53.0" layoutY="212.0" prefHeight="127.0" prefWidth="178.0" text="test" />
                             </children></AnchorPane>
                     </content>
                 </Tab>
