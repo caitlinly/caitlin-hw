@@ -4,13 +4,15 @@ public class Word {
 
     Word(){
         String s = null;
-        if(s.endsWith(",") || s.endsWith(".")) {
-            s.substring(0, s.length() - 1);
-        }
     }
 
     Word(String s){
-        this.s = s;
+        this.s = s.replaceAll("[^a-zA-Z]", "").toLowerCase();
+    }
+
+    @Override
+    public int hashCode() {
+        return s.hashCode();
     }
 
     @Override
@@ -22,5 +24,10 @@ public class Word {
             }
         }
         return false;
+    }
+
+    @Override
+    public String toString(){
+        return s;
     }
 }
