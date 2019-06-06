@@ -8,19 +8,6 @@ public class Friend{
     private String name;
     private int age;
 
-    //Make first and last name into one field ~~~~~~~~~~~~
-    //Your code in the friends class can split it up
-    //into two strings if you prefer or keep it
-    //as a single string
-
-    //Make sure that every new entry has a first ~~~~~~~~~~
-    // and last name
-
-    //Make sure the age is an integer ~~~~~~~~~~~~~~
-    // that is greater than a number of your choosing
-
-    //Create 2 sort buttons that sorts the names ~~~~~~`````````````````
-    // either by age or by last name
     Friend(){
         name = name;
         age = age;

@@ -13,7 +13,7 @@ public class CreateFriend {
     private static ArrayList<Friend> friends = new ArrayList<Friend>();
 
     public static ArrayList createAllFriends(String fileName) throws IOException {
-        fr = new FileReader(fileName);
+        fr = new FileReader("Friends.txt");
         br = new BufferedReader(fr);
         String line;
         String friendString = "";
